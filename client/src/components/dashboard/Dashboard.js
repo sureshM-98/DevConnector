@@ -11,7 +11,7 @@ import Education from './Education';
 const Dashboard = ({ getCurrentprofile, deleteAccount, auth: { user }, profile: { profile, loading } }) => {
   useEffect(() => {
     getCurrentprofile();
-  }, []);
+  }, [getCurrentprofile]);
 
   return loading && profile === null ? (
     <Spinner />
